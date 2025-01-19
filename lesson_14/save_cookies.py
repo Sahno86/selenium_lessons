@@ -22,15 +22,15 @@ driver.get('https://www.freeconferencecall.com/ru/pl/login')
 
 # driver.find_element(*LOGIN_FIELD).send_keys("mishenkinav@gmail.com")
 # driver.find_element(*PASSWORD_FIELD).send_keys("qaz")
-# time.sleep(4)
+# time.sleep(5)
 # driver.find_element(*SUBMIT_BUUTON).click()
-#
-# pickle.dump(driver.get_cookies(), open(os.getcwd()+"\cookies\cookies.pkl", "wb"))
+
+# pickle.dump(driver.get_cookies(), open(os.getcwd()+"\\lesson_14\\cookies\\cookies.pkl", "wb"))
 
 #чтобы добавить новые куки, сначала удаляем старые
 driver.delete_all_cookies()
 
-cookies = pickle.load(open(os.getcwd()+"\cookies\cookies.pkl", "rb"))
+cookies = pickle.load(open(os.getcwd()+"\\lesson_14\\cookies\\cookies.pkl", "rb"))
 
 for cookie in cookies:
     driver.add_cookie(cookie)
